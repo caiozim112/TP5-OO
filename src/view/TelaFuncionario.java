@@ -98,7 +98,7 @@ public class TelaFuncionario extends JFrame implements ActionListener, ListSelec
 		Object src = e.getSource();
 		int qntnumeros = DadosPessoa.getListafuncionarios().size();
 		if (e.getValueIsAdjusting() && src == this.listaFuncionariosCadastrados) {
-			System.out.println("oila" + this.listaFuncionariosCadastrados.getSelectedIndex());
+			
 			new TelaDetalheFuncionario().InserirDados(2, this.listaFuncionariosCadastrados.getSelectedIndex());
 		}
 		if (this.listaFuncionariosCadastrados.getSelectedIndex() > qntnumeros) {

@@ -2,6 +2,7 @@ package view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -31,8 +32,9 @@ public class TelaDetalheFuncionario implements ActionListener {
 	private JButton botaoSalvar = new JButton("Salvar");
 	int escolha = 0;
 	int posicao = 0;
+
 	public void InserirDados(int esc, int pos) {
-		this.posicao = pos;//pega a posicao do ArrayList
+		this.posicao = pos;// pega a posicao do ArrayList
 		janela = new JFrame();
 
 		if (esc == 1) {
@@ -66,11 +68,11 @@ public class TelaDetalheFuncionario implements ActionListener {
 		TextCargaHoraria.setBounds(180, 140, 180, 25);
 		labelSalario.setBounds(30, 170, 150, 25);
 		TextSalario.setBounds(180, 170, 180, 25);
-		if(esc==1|| esc==2) {
-		botaoSalvar.setBounds(30, 200, 115, 30);
+		if (esc == 1 || esc == 2) {
+			botaoSalvar.setBounds(30, 200, 115, 30);
 		}
-		if(esc==2) {
-		botaoExcluir.setBounds(180, 200, 115, 30);
+		if (esc == 2) {
+			botaoExcluir.setBounds(180, 200, 115, 30);
 		}
 		this.janela.add(labelNome);
 		this.janela.add(labelTelefone);
@@ -101,22 +103,20 @@ public class TelaDetalheFuncionario implements ActionListener {
 				JOptionPane.INFORMATION_MESSAGE);
 		this.janela.dispose();
 	}
-	
+
 	public void mensagemSucessoExclusao() {
-		JOptionPane.showMessageDialog(null, "Os dados foram excluidos!", null,
-				JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Os dados foram excluidos!", null, JOptionPane.INFORMATION_MESSAGE);
 		this.janela.dispose();
 	}
 
-
 	public void actionPerformed(ActionEvent e) {
 		ControleFuncionario controleFuncionario = new ControleFuncionario();
-		String cpf;
-		String telefone;
-		String nome;
-		String cargo;
-		int cargaHoraria;
-		double salario;
+		String cpf = null;
+		String telefone = null;
+		String nome = null;
+		String cargo = null;
+		int cargaHoraria = 0;
+		double salario = 0.0;
 		Object src = e.getSource();
 		if (escolha == 1) {
 			cpf = TextCpf.getText();
@@ -133,33 +133,30 @@ public class TelaDetalheFuncionario implements ActionListener {
 
 			controleFuncionario.adicionaFuncionario(cpf, telefone, nome, cargo, cargaHoraria, salario);
 		}
-			if (src == botaoSalvar) {
-				mensagemSucessoCadastro();
-			}
-			if(src==botaoExcluir) {
-				for (Funcionario f : DadosPessoa.getListafuncionarios()) {
-					if (DadosPessoa.getListafuncionarios().get(this.posicao).getNome().equals(f.getNome())) {
-						DadosPessoa.getListafuncionarios().remove(f);
-						mensagemSucessoExclusao();
-					}
-					escolha = 0;
-				}
-			}
-			if (escolha == 2) {
-				cpf =TextCpf.getText();
-				
-				telefone = TextTelefone.getText();
+		if (src == botaoSalvar) {
+			mensagemSucessoCadastro();
+		}
+		if (src == botaoExcluir) {
+					DadosPessoa.getListafuncionarios().remove(posicao);
+					mensagemSucessoExclusao();
 
-				nome = TextNome.getText();
+				escolha = 0;
+		}
+		if (escolha == 2) {
+			cpf = TextCpf.getText();
 
-				cargo = TextCargo.getText();
+			telefone = TextTelefone.getText();
 
-				cargaHoraria =Integer.parseInt(TextCargaHoraria.getText());
+			nome = TextNome.getText();
 
-				salario = Double.parseDouble(TextSalario.getText());
-				
-				controleFuncionario.alteraFuncionario(cpf, telefone, nome, cargo, cargaHoraria, salario,this.posicao);
-			}
+			cargo = TextCargo.getText();
+
+			cargaHoraria = Integer.parseInt(TextCargaHoraria.getText());
+
+			salario = Double.parseDouble(TextSalario.getText());
+
+			controleFuncionario.alteraFuncionario(cpf, telefone, nome, cargo, cargaHoraria, salario, this.posicao);
+		}
 	}
 
 	public JFrame getJanela() {

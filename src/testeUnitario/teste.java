@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import modelpessoa.DadosPessoa;
+import modelpessoa.Funcionario;
 import view.TelaDetalheFuncionario;
 
 class teste {
@@ -13,19 +14,31 @@ class teste {
 		
 			DadosPessoa.getListafuncionarios().clear();
 			
-			
-		   var interfaceTeste = new TelaDetalheFuncionario();
-			interfaceTeste.getTextCpf().setText(" ");
-			interfaceTeste.getTextTelefone().setText(" ");
-			interfaceTeste.getTextNome().setText(" ");
-			interfaceTeste.getTextCargo().setText(" ");
-			interfaceTeste.getTextCargaHoraria().setText(" ");
-			interfaceTeste.getTextSalario().setText(" ");
-			
-			interfaceTeste.getBotaoSalvar().doClick();
+			TelaDetalheFuncionario var=new TelaDetalheFuncionario();
+			var.InserirDados(1, 0);
+			var.getTextCargaHoraria().setText(Integer.toString(0));
+			var.getTextCargo().setText("");
+			var.getTextCpf().setText("");
+			var.getTextNome().setText("");
+			var.getTextSalario().setText(Integer.toString(0));
+			var.getTextTelefone().setText("");
+			var.getBotaoSalvar().doClick();
 			
 			assertTrue(DadosPessoa.getListafuncionarios().isEmpty());
-			System.out.println("oi");
 	}
-
+	@Test
+	void testeExcluirCliente() {
+		DadosPessoa.getListafuncionarios().clear();
+		TelaDetalheFuncionario var=new TelaDetalheFuncionario();
+		dados();
+		var.InserirDados(2, 0);
+		var.getBotaoExcluir().doClick();
+		assertTrue(DadosPessoa.getListafuncionarios().isEmpty());
+	}
+	
+	private void dados() {
+		Funcionario c = new Funcionario("cpf","61996592058","Caio","Marketing",40,1700.00);
+		DadosPessoa.getListafuncionarios().add(c);
+		
+	}
 }

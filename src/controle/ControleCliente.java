@@ -6,12 +6,14 @@ import modelpessoa.DadosPessoa;
 public class ControleCliente {
 	Cliente c;
 	public ControleCliente() {
-
+	
 	}
 
 	public void adicionaCliente(String cpf,String telefone,String nome) {
+		if(!cpf.isBlank() && !telefone.isBlank() && !nome.isBlank()) {
 		this.c = new Cliente(cpf,telefone,nome);
 		DadosPessoa.getListaclientes().add(c);
+		}
 	}
 	public void alteraCliente(String cpf,String telefone,String nome,int pos) {
 	for(Cliente c:DadosPessoa.getListaclientes()) {

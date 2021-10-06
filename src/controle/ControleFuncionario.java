@@ -10,10 +10,12 @@ public class ControleFuncionario {
 
 	}
 
-	public void adicionaFuncionario(String cpf, String telefone, String nome, String cargo, int cargaHoraria,
-			double salario) {
+	public void adicionaFuncionario(String cpf, String telefone, String nome, String cargo, int cargaHoraria,double salario) {
+		if(!cpf.isBlank() && !telefone.isBlank() && !nome.isBlank() && !cargo.isBlank() && cargaHoraria>0 && salario>0) {
 		this.f = new Funcionario(cpf, telefone, nome, cargo, cargaHoraria, salario);
+		
 		DadosPessoa.getListafuncionarios().add(f);
+		}
 	}
 
 	public void alteraFuncionario(String cpf, String telefone, String nome, String cargo, int cargaHoraria,double salario, int pos) {
