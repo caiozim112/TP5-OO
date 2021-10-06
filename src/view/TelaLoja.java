@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -27,6 +28,8 @@ public class TelaLoja extends JFrame implements ActionListener, ListSelectionLis
 	private final JButton cadastroVenda;
 	private JButton refreshVenda;
 	private JList<String> listaVendasCadastradas;
+	private JTextField receita;
+	private JLabel labelreceita = new JLabel("Receita");
 	private TelaLojaController controle;
 	public TelaLoja() {
 		super("Tela Capinha");
@@ -50,13 +53,19 @@ public class TelaLoja extends JFrame implements ActionListener, ListSelectionLis
 		this.refreshVenda.addActionListener(this);
 
 		this.setLayout(null);
-
+		receita = new JTextField(Double.toString(Dados.Receita()));
+		this.add(receita);
+		this.add(labelreceita);
+		this.receita.setBounds(330, 20, 150, 25);
+		this.labelreceita.setBounds(280, 20, 180, 25);
+		this.setLayout(null);
+		
 		this.add(titulo);
 		this.add(listaVendasCadastradas);
 		this.add(cadastroVenda);
 		this.add(refreshVenda);
 
-		this.setSize(400, 250);
+		this.setSize(500, 250);
 		this.setVisible(true);
 	}
 
@@ -85,6 +94,14 @@ public class TelaLoja extends JFrame implements ActionListener, ListSelectionLis
 
 	public JList<String> getListaVendasCadastradas() {
 		return listaVendasCadastradas;
+	}
+
+	public JTextField getReceita() {
+		return receita;
+	}
+
+	public void setReceita(JTextField receita) {
+		this.receita = receita;
 	}
 
 

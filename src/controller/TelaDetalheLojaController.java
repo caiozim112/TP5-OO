@@ -22,6 +22,7 @@ public class TelaDetalheLojaController {
 		String tipodeProduto;
 		String id;
 		int qnt;
+		Double valor;
 		Object src = e.getSource();
 		if(view.getEscolha()==1) {
 			nomedoCliente=view.getTextnomeCliente().getText();
@@ -29,7 +30,8 @@ public class TelaDetalheLojaController {
 			tipodeProduto=view.getTexttipoProduto().getText();
 			id=view.getTextidProduto().getText();
 			qnt= Integer.parseInt(view.getTextqntProduto().getText());
-			objLoja.adicionaVenda(nomedoCliente, nomedoFuncionario, tipodeProduto,id,qnt);
+			valor= Double.parseDouble(view.getTextqntProduto().getText());
+			objLoja.adicionaVenda(nomedoCliente, nomedoFuncionario, tipodeProduto,id,qnt,valor);
 		}
 		if(src==view.getBotaoSalvar()) {
 			mensagemSucessoCadastro();

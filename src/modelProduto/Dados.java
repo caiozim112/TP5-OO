@@ -2,6 +2,8 @@ package modelProduto;
 
 import java.util.ArrayList;
 import java.util.List;
+import modelpessoa.DadosPessoa;
+import modelpessoa.Funcionario;
 
 public abstract class Dados {
 	private static final List<Capinha> listaCapinhas = new ArrayList<Capinha>();
@@ -11,6 +13,7 @@ public abstract class Dados {
 	private static final List<Tela> listaTelas = new ArrayList<Tela>();
 	
 	private static final List<Loja> listaVenda = new ArrayList<Loja>();
+	
 
 	private Dados() {
 	}
@@ -26,7 +29,17 @@ public abstract class Dados {
 	public static List<Tela> getListatelas() {
 		return listaTelas;
 	}
-
+	
+	public static Double  Receita(){
+		Double valorsalario = 0.0;
+		for(Funcionario f :DadosPessoa.getListafuncionarios()) {
+			valorsalario=valorsalario-f.getSalario();
+			}
+		for(Loja l : getListavenda()) {
+		valorsalario= valorsalario+(l.getQnt()*l.getValor());
+	}
+		return valorsalario;
+	}
 	public static String[] retornanomecapinhas() {// feito
 		String[] s = new String[100];
 		for (int i = 0; i < listaCapinhas.size(); i++) {

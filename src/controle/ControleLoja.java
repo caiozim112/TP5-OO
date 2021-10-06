@@ -10,11 +10,11 @@ public class ControleLoja {
 
 	}
 
-	public void adicionaVenda(String nomedoCliente, String nomedoFuncionario, String tipodeProduto, String id,int qnt) {
+	public void adicionaVenda(String nomedoCliente, String nomedoFuncionario, String tipodeProduto, String id,int qnt,Double valor) {
 		ValidaProduto(tipodeProduto,id,qnt);
 		String nomecliente=validadornomedocliente(nomedoCliente);
 		String nomeFuncionario = validadornomedoFuncionario(nomedoFuncionario);
-		this.l = new Loja(nomecliente,nomeFuncionario, tipodeProduto, id, qnt);
+		this.l = new Loja(nomecliente,nomeFuncionario, tipodeProduto, id, qnt,valor);
 		Dados.getListavenda().add(l);
 	}
 

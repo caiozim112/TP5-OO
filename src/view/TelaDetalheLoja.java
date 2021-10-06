@@ -23,6 +23,8 @@ public class TelaDetalheLoja implements ActionListener  {
 	private JTextField TextidProduto;
 	private JLabel labelqnt = new JLabel("Quantidade: ");
 	private JTextField TextqntProduto;
+	private JLabel labelvalor = new JLabel("Valor: ");
+	private JTextField TextvalorProduto;
 	private JButton botaoExcluir = new JButton("Excluir");
 	private JButton botaoSalvar = new JButton("Salvar");
 	int escolha=0;
@@ -40,6 +42,7 @@ public class TelaDetalheLoja implements ActionListener  {
 			TexttipoProduto = new JTextField();
 			TextidProduto = new JTextField();
 			TextqntProduto= new JTextField();
+			TextvalorProduto = new JTextField();
 			escolha =1;
 		}
 		if (esc == 3) {
@@ -48,6 +51,7 @@ public class TelaDetalheLoja implements ActionListener  {
 		TexttipoProduto = new JTextField(Dados.getListavenda().get(pos).getTipoproduto());
 		TextidProduto = new JTextField(Dados.getListavenda().get(pos).getId());
 		TextqntProduto= new JTextField(String.valueOf(Dados.getListavenda().get(pos).getQnt()));
+		TextvalorProduto = new JTextField(String.valueOf(Dados.getListavenda().get(pos).getValor()));
 		
 		}
 		
@@ -61,7 +65,8 @@ public class TelaDetalheLoja implements ActionListener  {
 		TextidProduto.setBounds(180, 110, 180, 25);
 		labelqnt.setBounds(30, 140, 150, 25);
 		TextqntProduto.setBounds(180, 140, 180, 25);
-		
+		labelvalor.setBounds(30, 170, 150, 25);
+		TextvalorProduto.setBounds(180, 170, 180, 25);
 		if (esc == 1) {
 			botaoSalvar.setBounds(30, 200, 115, 30);
 		}
@@ -80,6 +85,9 @@ public class TelaDetalheLoja implements ActionListener  {
 		this.janela.add(TextnomeFuncionario);
 		this.janela.add(TexttipoProduto);
 		this.janela.add(TextqntProduto);
+		this.janela.add(TextvalorProduto);
+		this.janela.add(labelvalor);
+		
 		this.janela.setLayout(null);
 
 		this.janela.setSize(400, 300);

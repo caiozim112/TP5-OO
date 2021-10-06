@@ -5,17 +5,30 @@ public class Loja {
 	private String id;
 	private int qnt;
 	private String tipoproduto;
-	
-	public Loja(String nomeCliente, String nomeFuncionario,String tipoproduto, String id, int qnt) {
+	private Double valor;
+	public Loja(String nomeCliente, String nomeFuncionario,String tipoproduto, String id, int qnt,Double valor) {
 		this.tipoproduto=tipoproduto;
 		this.nomeCliente = nomeCliente;
 		this.nomeFuncionario = nomeFuncionario;
 		this.id = id;
 		this.qnt = qnt;
+		this.valor = valor;
 	}
 
 
 	
+	public Double getValor() {
+		return valor;
+	}
+
+
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+
+
 	public String getTipoproduto() {
 		return tipoproduto;
 	}

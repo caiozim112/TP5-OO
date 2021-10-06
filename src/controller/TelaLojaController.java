@@ -28,6 +28,8 @@ public class TelaLojaController {
 		if (botaoCadastroVenda == view.getRefreshVenda()) {
 			view.getListaVendasCadastradas().setListData(Dados.retornanomevendas());
 			view.getListaVendasCadastradas().updateUI();
+			view.getReceita().setText(Double.toString(Dados.Receita()));
+			view.getReceita().updateUI();
 		}
 
 	}

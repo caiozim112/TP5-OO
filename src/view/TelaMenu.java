@@ -22,7 +22,7 @@ public class  TelaMenu extends JFrame implements ActionListener {
 	private final JButton cliente = new JButton("Cliente");
 	private final JButton funcionario = new JButton("Funcionario");
 	private final JButton produto = new JButton("Produto");
-	private final JButton venda = new JButton("Venda");
+	private final JButton venda = new JButton("Loja/Venda");
 	private final TelaMenuController controller;
 
 	public TelaMenu() {
