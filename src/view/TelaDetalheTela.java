@@ -9,9 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField; 
 
 import controle.ControleTela;
-import modelProduto.Capinha;
 import modelProduto.Dados;
-import modelProduto.Tela;
 
 	public class TelaDetalheTela implements ActionListener {
 		private JFrame janela;
@@ -139,14 +137,10 @@ import modelProduto.Tela;
 			
 			}
 			if(src==botaoExcluir) {
-				for (Tela t : Dados.getListatelas()) {
-					if (Dados.getListatelas().get(this.posicao).getId().equals(t.getId())) {
-						Dados.getListatelas().remove(t);
+						Dados.getListatelas().remove(this.posicao);
 						mensagemSucessoExclusao();
+						escolha = 0;
 					}
-					escolha = 0;
-				}
-			}
 			if(escolha==2) {
 				id = TextId.getText();
 

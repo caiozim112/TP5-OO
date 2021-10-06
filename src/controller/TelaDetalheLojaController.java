@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
 import controle.ControleLoja;
-import viewloja.TelaDetalheLoja;
+import view.TelaDetalheLoja;
 
 public class TelaDetalheLojaController {
 	private TelaDetalheLoja view;

@@ -15,12 +15,12 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import controller.TelaFuncionarioController;
-import controller.TelaClienteController;
 import modelpessoa.DadosPessoa;
 
 //front-end
 public class TelaFuncionario extends JFrame implements ActionListener, ListSelectionListener {
 
+	private static final long serialVersionUID = 1L;
 	private JLabel titulo; // titulo é um objeto da classe JLabel
 	private final JButton cadastroFuncionario;
 	private JButton refreshFuncionario;

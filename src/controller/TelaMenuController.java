@@ -3,14 +3,13 @@ package controller;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
-import controle.ControleCapinha;
+
 import view.TelaMenu;
 import view.TelaCliente;
 import view.TelaFuncionario;
+import view.TelaLoja;
 import view.TelaProduto;
-import viewloja.TelaLoja;
 
 public class TelaMenuController {
 	private TelaMenu view;

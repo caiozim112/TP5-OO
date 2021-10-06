@@ -20,6 +20,10 @@ import modelProduto.Dados;
 //front-end
 public class TelaTela extends JFrame implements ActionListener, ListSelectionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JLabel titulo; // titulo é um objeto da classe JLabel
 	private final JButton cadastroTela;
 	private JButton refreshTela;

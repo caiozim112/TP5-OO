@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import controle.ControleCarregador;
-import modelProduto.Carregador;
 import modelProduto.Dados;
 
 public class TelaDetalheCarregador implements ActionListener {
@@ -29,7 +28,6 @@ public class TelaDetalheCarregador implements ActionListener {
 	int posicao = 0;
 
 	public void InserirDados(int esc, int pos) {
-		System.out.println(pos);
 		this.posicao = pos;
 		janela = new JFrame();
 		if (esc == 1) {
@@ -139,11 +137,8 @@ public class TelaDetalheCarregador implements ActionListener {
 
 		}
 		if (src == botaoExcluir) {
-			for (Carregador c : Dados.getListacarrregadores()) {
-				if (Dados.getListacarrregadores().get(this.posicao).getId().equals(c.getId())) {
-					Dados.getListacarrregadores().remove(c);
+					Dados.getListacarrregadores().remove(this.posicao);
 					mensagemSucessoExclusao();
-				}
 				escolha = 0;
 			}
 
@@ -161,4 +156,3 @@ public class TelaDetalheCarregador implements ActionListener {
 
 		}
 	}
-}

@@ -1,4 +1,4 @@
-package viewloja;
+package view;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;

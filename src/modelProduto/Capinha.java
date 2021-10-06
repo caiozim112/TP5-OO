@@ -10,7 +10,7 @@ public final class Capinha extends Produto {
 		this.modelo = modelo;
 		this.qnt = qnt;
 	}
-
+	
 	public String getCor() {
 		return cor;
 	}

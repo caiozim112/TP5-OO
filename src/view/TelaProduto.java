@@ -7,12 +7,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.WindowConstants;
 
 import controller.TelaProdutoController;
 
 public class TelaProduto extends JFrame implements ActionListener{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final JFrame janela = new JFrame("Controle de Vendas");
 	private final JLabel titulo = new JLabel("Menu Principal");
 	private final JButton Capinha = new JButton("Capinha");

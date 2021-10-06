@@ -7,8 +7,8 @@ import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 
 import modelProduto.Dados;
-import viewloja.TelaDetalheLoja;
-import viewloja.TelaLoja;
+import view.TelaDetalheLoja;
+import view.TelaLoja;
 
 public class TelaLojaController {
 	private TelaLoja view;

@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
 import controle.ControleCapinha;
-import modelProduto.Capinha;
 import modelProduto.Dados;
 import view.TelaDetalheCapinha;
 
@@ -54,13 +53,9 @@ public class TelaDetalheCapinhaController {
 
 		}
 		if (src == view.getBotaoExcluir()) {
-			for (Capinha c : Dados.getListacapinhas()) {
-				if (Dados.getListacapinhas().get(view.getPosicao()).getId().equals(c.getId())) {
-					Dados.getListacapinhas().remove(c);
+					Dados.getListacapinhas().remove(view.getPosicao());
 					mensagemSucessoExclusao();
 				}
-			}
-		}
 		
 		
 		

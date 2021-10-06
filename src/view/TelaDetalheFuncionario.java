@@ -2,7 +2,6 @@ package view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +11,6 @@ import javax.swing.JTextField;
 
 import controle.ControleFuncionario;
 import modelpessoa.DadosPessoa;
-import modelpessoa.Funcionario;
 
 public class TelaDetalheFuncionario implements ActionListener {
 	private JFrame janela;

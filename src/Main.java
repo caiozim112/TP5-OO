@@ -4,6 +4,7 @@ import modelProduto.Tela;
 import modelpessoa.Cliente;
 import modelpessoa.DadosPessoa;
 import modelpessoa.Funcionario;
+import modelProduto.Carregador;
 import view.TelaMenu;
 public class Main {
 
@@ -20,6 +21,8 @@ public class Main {
 		Dados.getListacapinhas().add(ca);
 		Tela t = new Tela("5555","Samsung","S9",10);
 		Dados.getListatelas().add(t);
+		Carregador car =  new Carregador("4444","Xiaomi","POCO X3 PRO",5);
+		Dados.getListacarrregadores().add(car);
 	}
 	
 }

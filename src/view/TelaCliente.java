@@ -44,7 +44,7 @@ public class TelaCliente extends JFrame implements ActionListener, ListSelection
 		this.listaClientesCadastrados.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		this.listaClientesCadastrados.setVisibleRowCount(10);// 10 linhas visiveis
 		this.listaClientesCadastrados.addListSelectionListener(this);
-
+		
 		this.cadastroCliente = new JButton("Cadastrar");
 		this.cadastroCliente.setBounds(70, 177, 100, 30);
 		this.cadastroCliente.addActionListener(this);
