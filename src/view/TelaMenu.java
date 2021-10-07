@@ -13,9 +13,6 @@ import controller.TelaMenuController;
 
 public class  TelaMenu extends JFrame implements ActionListener {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private final JFrame janela = new JFrame("Controle de Vendas");
 	private final JLabel titulo = new JLabel("Menu Principal");
@@ -23,6 +20,7 @@ public class  TelaMenu extends JFrame implements ActionListener {
 	private final JButton funcionario = new JButton("Funcionario");
 	private final JButton produto = new JButton("Produto");
 	private final JButton venda = new JButton("Loja/Venda");
+	private final JButton estoque = new JButton("Estoque");
 	private final TelaMenuController controller;
 
 	public TelaMenu() {
@@ -42,6 +40,9 @@ public class  TelaMenu extends JFrame implements ActionListener {
 		this.add(venda);
 		this.venda.addActionListener(this);
 		
+		this.add(estoque);
+		this.estoque.addActionListener(this);
+		
 		this.setSize(300, 200);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -58,6 +59,10 @@ public class  TelaMenu extends JFrame implements ActionListener {
 
 	public JLabel getTitulo() {
 		return titulo;
+	}
+
+	public JButton getEstoque() {
+		return estoque;
 	}
 
 	public JButton getCliente() {

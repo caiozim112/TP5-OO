@@ -7,6 +7,7 @@ import javax.swing.JButton;
 
 import view.TelaMenu;
 import view.TelaCliente;
+import view.TelaEstoque;
 import view.TelaFuncionario;
 import view.TelaLoja;
 import view.TelaProduto;
@@ -32,6 +33,10 @@ public class TelaMenuController {
 		}
 		if(botaoProgramaPrincipal == view.getVenda()) {
 			TelaLoja objTela = new TelaLoja();
+		}
+		if(botaoProgramaPrincipal== view.getEstoque()) {
+			System.out.println("oi");
+			TelaEstoque objEstoque = new TelaEstoque();
 		}
 
 	}

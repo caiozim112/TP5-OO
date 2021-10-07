@@ -24,7 +24,7 @@ public class TelaTela extends JFrame implements ActionListener, ListSelectionLis
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JLabel titulo; // titulo é um objeto da classe JLabel
+	private JLabel titulo;
 	private final JButton cadastroTela;
 	private JButton refreshTela;
 	private JList<String> listaTelasCadastradas;
