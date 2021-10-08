@@ -1,4 +1,4 @@
-package modelProduto;
+package modelproduto;
 public abstract class Produto {
 	String id;
 	String marca;

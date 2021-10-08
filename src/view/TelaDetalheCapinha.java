@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import controller.TelaDetalheCapinhaController;
-import modelProduto.Dados;
+import modelproduto.Dados;
 
 public class TelaDetalheCapinha implements ActionListener {
 

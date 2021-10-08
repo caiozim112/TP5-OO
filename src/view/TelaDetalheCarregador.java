@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import controle.ControleCarregador;
-import modelProduto.Dados;
+import modelproduto.Dados;
 
 public class TelaDetalheCarregador implements ActionListener {
 	private JFrame janela;

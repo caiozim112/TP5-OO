@@ -35,7 +35,6 @@ public class TelaMenuController {
 			TelaLoja objTela = new TelaLoja();
 		}
 		if(botaoProgramaPrincipal== view.getEstoque()) {
-			System.out.println("oi");
 			TelaEstoque objEstoque = new TelaEstoque();
 		}
 

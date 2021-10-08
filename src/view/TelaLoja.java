@@ -14,7 +14,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import controller.TelaLojaController;
-import modelProduto.Dados;
+import modelproduto.Dados;
 
 
 //front-end

@@ -1,4 +1,4 @@
-package modelProduto;
+package modelproduto;
 
 public final class Carregador extends Produto {
 	private String padrao;

@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
 import controle.ControleCapinha;
-import modelProduto.Dados;
+import modelproduto.Dados;
 import view.TelaDetalheCapinha;
 
 public class TelaDetalheCapinhaController {

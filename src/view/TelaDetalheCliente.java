@@ -21,12 +21,6 @@ public class TelaDetalheCliente implements ActionListener {
 	private JTextField TextTelefone;
 	private JLabel labelCpf = new JLabel("Cpf: ");
 	private JTextField TextCpf;
-	private JLabel labelCargo = new JLabel("Cargo: ");
-	private JTextField TextCargo;
-	private JLabel labelCargaHoraria = new JLabel("Carga Horaria: ");
-	private JTextField TextCargaHoraria;
-	private JLabel labelSalario = new JLabel("Salario: ");
-	private JTextField TextSalario;
 	private JButton botaoExcluir = new JButton("Excluir");
 	private JButton botaoSalvar = new JButton("Salvar");
 	int escolha = 0;
@@ -65,9 +59,6 @@ public class TelaDetalheCliente implements ActionListener {
 		this.janela.add(labelNome);
 		this.janela.add(labelTelefone);
 		this.janela.add(labelCpf);
-		this.janela.add(labelCargo);
-		this.janela.add(labelCargaHoraria);
-		this.janela.add(labelSalario);
 		this.janela.add(botaoExcluir);
 		this.janela.add(botaoSalvar);
 		this.janela.add(TextNome);
@@ -95,27 +86,6 @@ public class TelaDetalheCliente implements ActionListener {
 		janela.dispose();
 	}
 
-	public void mensagemErroCadastro() {
-		JOptionPane.showMessageDialog(null,
-				"ERRO AO SALVAR OS DADOS!\n " + "Pode ter ocorrido um dos dois erros a seguir:  \n"
-						+ "1. Nem todos os campos foram preenchidos \n"
-						+ "2. CPF, identidade, DDD e telefone n�o cont�m apenas n�meros",
-				null, JOptionPane.ERROR_MESSAGE);
-	}
-
-	public void mensagemErroExclusaoAluno() {
-		JOptionPane.showMessageDialog(null,
-				"Ocorreu um erro ao excluir o dado.\n " + "Verifique se o aluno est� matriculado\n"
-						+ "em alguma disciplina. Se sim, cancele\n " + "a matricula e tente novamente.",
-				null, JOptionPane.ERROR_MESSAGE);
-	}
-
-	public void mensagemErroExclusaoProf() {
-		JOptionPane.showMessageDialog(null,
-				"Ocorreu um erro ao excluir o dado.\n " + "Verifique se o professor est� respons�vel\n"
-						+ "por alguma disciplina. Se sim, substitua\n " + "o professor e tente novamente.",
-				null, JOptionPane.ERROR_MESSAGE);
-	}
 
 	public void actionPerformed(ActionEvent e) {
 		ControleCliente controlecliente = new ControleCliente();
@@ -176,30 +146,6 @@ public class TelaDetalheCliente implements ActionListener {
 
 	public JTextField getTextCpf() {
 		return TextCpf;
-	}
-
-	public JLabel getLabelCargo() {
-		return labelCargo;
-	}
-
-	public JTextField getTextCargo() {
-		return TextCargo;
-	}
-
-	public JLabel getLabelCargaHoraria() {
-		return labelCargaHoraria;
-	}
-
-	public JTextField getTextCargaHoraria() {
-		return TextCargaHoraria;
-	}
-
-	public JLabel getLabelSalario() {
-		return labelSalario;
-	}
-
-	public JTextField getTextSalario() {
-		return TextSalario;
 	}
 
 	public JButton getBotaoExcluir() {

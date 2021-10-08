@@ -1,6 +1,6 @@
 package controle;
-import modelProduto.Dados;
-import modelProduto.Tela;
+import modelproduto.Dados;
+import modelproduto.Tela;
 public class ControleTela {
 		Tela t;
 		public ControleTela() {

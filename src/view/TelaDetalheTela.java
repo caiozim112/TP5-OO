@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField; 
 
 import controle.ControleTela;
-import modelProduto.Dados;
+import modelproduto.Dados;
 
 	public class TelaDetalheTela implements ActionListener {
 		private JFrame janela;

@@ -1,4 +1,4 @@
-package modelProduto;
+package modelproduto;
 
 public final class Capinha extends Produto {
 	private String cor;

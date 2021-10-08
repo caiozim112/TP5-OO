@@ -1,7 +1,7 @@
 package controle;
 
-import modelProduto.Carregador;
-import modelProduto.Dados;
+import modelproduto.Carregador;
+import modelproduto.Dados;
 
 public class ControleCarregador {
 	Carregador c;

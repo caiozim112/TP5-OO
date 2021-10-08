@@ -1,7 +1,7 @@
 package controle;
 
-import modelProduto.Capinha;
-import modelProduto.Dados;
+import modelproduto.Capinha;
+import modelproduto.Dados;
 
 public class ControleCapinha {
 	Capinha c;

@@ -1,4 +1,4 @@
-package modelProduto;
+package modelproduto;
 public class Loja {
 	private String nomeCliente;
 	private String nomeFuncionario;

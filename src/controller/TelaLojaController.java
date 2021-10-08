@@ -6,7 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 
-import modelProduto.Dados;
+import modelproduto.Dados;
 import view.TelaDetalheLoja;
 import view.TelaLoja;
 

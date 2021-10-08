@@ -1,10 +1,10 @@
-import modelProduto.Capinha;
-import modelProduto.Dados;
-import modelProduto.Tela;
 import modelpessoa.Cliente;
 import modelpessoa.DadosPessoa;
 import modelpessoa.Funcionario;
-import modelProduto.Carregador;
+import modelproduto.Capinha;
+import modelproduto.Carregador;
+import modelproduto.Dados;
+import modelproduto.Tela;
 import view.TelaMenu;
 public class Main {
 

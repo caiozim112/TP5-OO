@@ -1,8 +1,8 @@
 package controle;
 
-import modelProduto.Dados;
-import modelProduto.Loja;
 import modelpessoa.DadosPessoa;
+import modelproduto.Dados;
+import modelproduto.Loja;
 public class ControleLoja {
 	Loja l;
 
