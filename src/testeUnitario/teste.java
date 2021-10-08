@@ -41,6 +41,7 @@ class teste {
 	
 	/**
 	 * Teste para Excluir os Dados
+	 * @return true or false
 	 */
 	@Test
 	void testeExcluirCliente() {
@@ -52,6 +53,10 @@ class teste {
 		assertTrue(DadosPessoa.getListafuncionarios().isEmpty());
 	}
 	
+	/**
+	 * teste para testar a funcionalidade do Cadastro Venda
+	 * @return true or false
+	 */
 	@Test 
 	void testeCadastroVenda() {
 		Loja l = new Loja("Caio","Felipe","Capinha","3434",5,20.0);
@@ -59,7 +64,7 @@ class teste {
 		assertFalse(Dados.getListavenda().isEmpty());
 		
 	}
-	private void dados() {
+	private void dados() {//Dados aleatorios do Funcionario para o Test 
 		Funcionario c = new Funcionario("cpf","61996592058","Caio","Marketing",40,1700.00);
 		DadosPessoa.getListafuncionarios().add(c);
 		

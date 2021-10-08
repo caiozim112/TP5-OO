@@ -49,9 +49,8 @@ public class TelaDetalheFuncionario implements ActionListener {
 			TextTelefone = new JTextField(DadosPessoa.getListafuncionarios().get(pos).getTelefone());
 			TextNome = new JTextField(DadosPessoa.getListafuncionarios().get(pos).getNome());
 			TextCargo = new JTextField(DadosPessoa.getListafuncionarios().get(pos).getCargo());
-			TextCargaHoraria = new JTextField(
-					Integer.toString(DadosPessoa.getListafuncionarios().get(pos).getCargaHoraria()));
-			TextSalario = new JTextField(Double.toString(DadosPessoa.getListafuncionarios().get(pos).getSalario()));
+			TextCargaHoraria = new JTextField(Integer.toString(DadosPessoa.getListafuncionarios().get(pos).getCargaHoraria()));//Usado para passar String para Int
+			TextSalario = new JTextField(Double.toString(DadosPessoa.getListafuncionarios().get(pos).getSalario()));//usado para passar Stign para Double
 			escolha = 2;
 		}
 		labelCpf.setBounds(30, 20, 150, 25);
@@ -125,9 +124,9 @@ public class TelaDetalheFuncionario implements ActionListener {
 
 			cargo = TextCargo.getText();
 
-			cargaHoraria = Integer.parseInt(TextCargaHoraria.getText());
+			cargaHoraria = Integer.parseInt(TextCargaHoraria.getText());//Usado para passar String para Int
 
-			salario = Double.parseDouble(TextSalario.getText());
+			salario = Double.parseDouble(TextSalario.getText());//Usado para passar a String para Double
 
 			controleFuncionario.adicionaFuncionario(cpf, telefone, nome, cargo, cargaHoraria, salario);
 		}
@@ -149,9 +148,9 @@ public class TelaDetalheFuncionario implements ActionListener {
 
 			cargo = TextCargo.getText();
 
-			cargaHoraria = Integer.parseInt(TextCargaHoraria.getText());
+			cargaHoraria = Integer.parseInt(TextCargaHoraria.getText());//Usado para passar String para Int
 
-			salario = Double.parseDouble(TextSalario.getText());
+			salario = Double.parseDouble(TextSalario.getText());//Usado para passar a String para Double
 
 			controleFuncionario.alteraFuncionario(cpf, telefone, nome, cargo, cargaHoraria, salario, this.posicao);
 		}

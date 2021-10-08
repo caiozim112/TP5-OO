@@ -16,7 +16,7 @@ public class ControleCliente {
 	 * @param nome
 	 */
 	public void adicionaCliente(String cpf,String telefone,String nome) {
-		if(cpf.isBlank() && !telefone.isBlank() && !nome.isBlank()) { // Usado para evitar que entre Dados Em Branco
+		if(!cpf.isBlank() && !telefone.isBlank() && !nome.isBlank()) { // Usado para evitar que entre Dados Em Branco
 		this.c = new Cliente(cpf,telefone,nome);
 		DadosPessoa.getListaclientes().add(c);
 		}
