@@ -11,6 +11,13 @@ import javax.swing.WindowConstants;
 
 import controller.TelaMenuController;
 
+/**
+ * @author Usuario
+ *Classe Responsavel por dar ao usuario a escolha do que quer fazer
+ *
+ *@see JFrame
+ *@see ActionListener
+ */
 public class  TelaMenu extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
@@ -29,7 +36,7 @@ public class  TelaMenu extends JFrame implements ActionListener {
 		this.setLayout(new GridLayout(4, 2));
 		
 		this.add(cliente);//adiciona o botao cliente
-		this.cliente.addActionListener(this);//coloca o ouvido
+		this.cliente.addActionListener(this);//responsavel  por adicionar o ouvido do botao caso clicado
 		
 		this.add(funcionario);
 		this.funcionario.addActionListener(this);
@@ -45,7 +52,7 @@ public class  TelaMenu extends JFrame implements ActionListener {
 		
 		this.setSize(300, 200);
 		this.setVisible(true);
-		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//Responsavel por fechar a janela
 	}
 
 	@Override

@@ -15,20 +15,28 @@ import javax.swing.event.ListSelectionListener;
 
 import modelproduto.Dados;
 
-
-
-//front-end
+/**
+ * implementacao da TelaCapinha Herda a classe Jframe e implementa a interface
+ * ActionListener para criar e deixar o painel e suas usabilidades funcionais e
+ * também a classe ListSelectionListener para selecionar objetos do JList
+ * 
+ * @author Caio Vitor
+ * @version 1.0(outubro 2021)
+ */
 public class TelaCapinha extends JFrame implements ActionListener, ListSelectionListener {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JLabel titulo; // titulo é um objeto da classe JLabel
 	private final JButton cadastroCapinha;
 	private JButton refreshCapinha;
 	private JList<String> listaCapinhasCadastradas;
-
+	/**
+	 * Construtor da Classe TelaCapinha
+	 * que mostra o Jlist e adiciona eventos nos botoes
+	 * 
+	 * 
+	 * 
+	 */
 	public TelaCapinha() {
 		super("Tela Capinha");
 		this.titulo = new JLabel("Tela Cadastrados Capinha");
@@ -64,7 +72,7 @@ public class TelaCapinha extends JFrame implements ActionListener, ListSelection
 		JButton botaoCadastroCapinha = (JButton) e.getSource();
 		if (botaoCadastroCapinha == getCadastroCapinha()) {
 			TelaDetalheCapinha TelaCadCapinha = new TelaDetalheCapinha();
-			TelaCadCapinha.InserirDados(1,0);
+			TelaCadCapinha.InserirDados(1, 0);
 			getListaCapinhasCadastradas().updateUI();
 		}
 		if (botaoCadastroCapinha == getRefreshCapinha()) {
@@ -112,6 +120,5 @@ public class TelaCapinha extends JFrame implements ActionListener, ListSelection
 	public JList<String> getListaCapinhasCadastradas() {
 		return listaCapinhasCadastradas;
 	}
-
 
 }

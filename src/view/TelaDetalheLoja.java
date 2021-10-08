@@ -11,6 +11,11 @@ import javax.swing.JTextField;
 import controller.TelaDetalheLojaController;
 import modelproduto.Dados;
 
+/**
+ * implementra Action Listener que será responsavel pelos botoes 
+ * @author Caio Vitor 
+ *@see ActionListener
+ */
 public class TelaDetalheLoja implements ActionListener  {
 	private JFrame janela;
 	private JLabel labelnomeCliente = new JLabel("Nome do Cliente: ");
@@ -30,6 +35,14 @@ public class TelaDetalheLoja implements ActionListener  {
 	int escolha=0;
 	int posicao=0;
 	private TelaDetalheLojaController controle;
+	
+	/**
+	 *
+	 * @param esc
+	 * esc responsavel pela escolha do Usuario caso ele escolha cadastrar ou alterar
+	 * @param pos
+	 * relacionada a posicao que se encontra o elemento para ser alterado na Lista
+	 */
 	public void InserirDados(int esc ,int pos) {
 		this.posicao=pos;
 		this.controle= new TelaDetalheLojaController(this);
@@ -45,7 +58,7 @@ public class TelaDetalheLoja implements ActionListener  {
 			TextvalorProduto = new JTextField();
 			escolha =1;
 		}
-		if (esc == 3) {
+		if (esc == 3) {//Acioanado quando a escolha 3 e acionado mostrando os Dados do Usuario na Tela
 		TextnomeCliente = new JTextField(Dados.getListavenda().get(pos).getNomeCliente());
 		TextnomeFuncionario = new JTextField(Dados.getListavenda().get(pos).getNomeFuncionario());
 		TexttipoProduto = new JTextField(Dados.getListavenda().get(pos).getTipoproduto());

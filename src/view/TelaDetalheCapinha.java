@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import controller.TelaDetalheCapinhaController;
 import modelproduto.Dados;
 
+
 public class TelaDetalheCapinha implements ActionListener {
 
 	private JFrame janela;

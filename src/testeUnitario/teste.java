@@ -8,7 +8,15 @@ import modelpessoa.DadosPessoa;
 import modelpessoa.Funcionario;
 import view.TelaDetalheFuncionario;
 
+/**
+ * Criacao de Testes para qualificar a qualidade de Software
+ * @author Caio Vitor
+ *
+ */
 class teste {
+	/**
+	 * Teste Usado para Testar Cadastro Vazio Do sistema
+	 */
 	@Test
 	void cadastrovazio() {
 		
@@ -26,6 +34,12 @@ class teste {
 			
 			assertTrue(DadosPessoa.getListafuncionarios().isEmpty());
 	}
+	
+	
+	
+	/**
+	 * Teste para Excluir os Dados
+	 */
 	@Test
 	void testeExcluirCliente() {
 		DadosPessoa.getListafuncionarios().clear();

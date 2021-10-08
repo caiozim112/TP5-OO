@@ -6,13 +6,18 @@ import modelproduto.Carregador;
 import modelproduto.Dados;
 import modelproduto.Tela;
 import view.TelaMenu;
+
+/**
+ * @author Caio Vitor C.de Oliveira
+ * Classe criada para dar início a classe TelaMenu
+ */
 public class Main {
 
 	public static void main(String[] args) {
 		Dadosaleatorios();
 		TelaMenu telaInicial = new TelaMenu();;
 	}
-	private static void Dadosaleatorios() {
+	private static void Dadosaleatorios() {//Adicionando os Dados na Lista 
 		Cliente c=new Cliente("1223323442","33081267","Caio");
 		DadosPessoa.getListaclientes().add(c);
 		Funcionario f = new Funcionario("111111111","33081268","Felipe","Marketing",40,1500.00);
