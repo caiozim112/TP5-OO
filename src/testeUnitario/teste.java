@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import modelpessoa.DadosPessoa;
 import modelpessoa.Funcionario;
+import modelproduto.Dados;
+import modelproduto.Loja;
 import view.TelaDetalheFuncionario;
 
 /**
@@ -50,9 +52,17 @@ class teste {
 		assertTrue(DadosPessoa.getListafuncionarios().isEmpty());
 	}
 	
+	@Test 
+	void testeCadastroVenda() {
+		Loja l = new Loja("Caio","Felipe","Capinha","3434",5,20.0);
+		Dados.getListavenda().add(l);
+		assertFalse(Dados.getListavenda().isEmpty());
+		
+	}
 	private void dados() {
 		Funcionario c = new Funcionario("cpf","61996592058","Caio","Marketing",40,1700.00);
 		DadosPessoa.getListafuncionarios().add(c);
 		
 	}
+	
 }

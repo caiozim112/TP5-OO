@@ -18,6 +18,19 @@ public class ControleCapinha {
 
 	}
 
+	/**
+	 * Responsavel por adicionar na lista
+	 * @param id
+	 * id responsavel pela identificao   
+	 * @param marca
+	 * marca da capinha
+	 * @param cor
+	 * cor da capinha
+	 * @param modelo
+	 * modelo= modelo do celular suportavel
+	 * @param qnt
+	 * qnt = quantidade de capinhas no estoque
+	 */
 	public void adicionaCapinha(String id, String marca, String cor, String modelo,int qnt) {
 		this.c = new Capinha(id, marca, cor, modelo,qnt);
 		Dados.getListacapinhas().add(c);
