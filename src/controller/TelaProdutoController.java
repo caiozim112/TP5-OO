@@ -4,10 +4,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 
-import view.TelaCapinha;
-import view.TelaCarregador;
 import view.TelaProduto;
-import view.TelaTela;
+import view.TelaProdutoProdutos;
 
 public class TelaProdutoController {
 	private TelaProduto view;
@@ -20,14 +18,14 @@ public class TelaProdutoController {
 	public void executaBotao(ActionEvent e) {
 		JButton botaoTelaProduto = (JButton) e.getSource();
 
-		if (botaoTelaProduto == view.getCapinha()) {
-			TelaCapinha objCapinha = new TelaCapinha();
+	if (botaoTelaProduto == view.getCapinha()) {
+		TelaProdutoProdutos objCapinha = new TelaProdutoProdutos("Capinha");
 		}
 		if (botaoTelaProduto == view.getCarregador()) {
-			TelaCarregador objCarregador = new TelaCarregador();
+			TelaProdutoProdutos objCarregador = new TelaProdutoProdutos("Carregador");
 		}
 		if (botaoTelaProduto == view.getTela()) {
-			TelaTela objTela = new TelaTela();
+			TelaProdutoProdutos objTela = new TelaProdutoProdutos("Tela");
 		}
 
 	}

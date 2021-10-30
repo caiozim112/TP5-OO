@@ -6,7 +6,6 @@ import javax.swing.JButton;
 
 
 import view.TelaMenu;
-import view.TelaCliente;
 import view.TelaEstoque;
 import view.TelaFuncionario;
 import view.TelaLoja;
@@ -22,9 +21,6 @@ public class TelaMenuController {
 
 	public void executaBotaoProgramaPrincipal(ActionEvent e) {
 		JButton botaoProgramaPrincipal =  (JButton) e.getSource();
-		if (botaoProgramaPrincipal == view.getCliente()) {
-			TelaCliente objPessoa = new TelaCliente();
-		}
 		if (botaoProgramaPrincipal == view.getFuncionario()) {
 			TelaFuncionario objFuncionario = new TelaFuncionario();
 		}

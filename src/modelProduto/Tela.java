@@ -24,4 +24,10 @@ public final class Tela extends Produto {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+
+	@Override
+	public String toString() {
+		return "Tela [modelo=" + modelo + ", qnt=" + qnt + ", id=" + id + ", marca=" + marca + "]";
+	}
+	
 }

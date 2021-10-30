@@ -4,6 +4,7 @@ public final class Capinha extends Produto {
 	private String cor;
 	private String modelo;
 	private int qnt;
+	
 	public Capinha(String id, String marca, String cor, String modelo,int qnt) {
 		super(id, marca);
 		this.cor = cor;

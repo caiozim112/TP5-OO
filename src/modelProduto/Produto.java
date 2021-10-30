@@ -24,16 +24,9 @@ public abstract class Produto {
 		this.marca = marca;
 	}
 
-	public void cad() {// alterar
-
-	}
-
-	public void del() {// deletar
-
-	}
-
-	public void alt() {// alt
-
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", marca=" + marca + "]";
 	}
 
 }
